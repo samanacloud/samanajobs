@@ -1,3 +1,6 @@
 /admin/vendor/
 /google-login/vendor/
+google-login/config.php
+google-login/credentials.json
+config/config.php
 
