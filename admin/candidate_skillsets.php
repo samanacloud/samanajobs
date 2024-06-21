@@ -202,8 +202,7 @@ if (isset($_POST['delete_rating'])) {
     $category = $db->real_escape_string($_POST['category']);
     $skillset = $db->real_escape_string($_POST['skillset']);
 
-    $db->query("DELETE FROM candidate_skillsets WHERE candidate_id = $candidate_id AND category = '$category' AND skillset = '$skillset'");
-}
+$db->query("DELETE FROM candidate_skillsets WHERE candidate_id = $candidate_id AND category = '$category' AND skillset = '$skillset' AND reviewer_email = '$reviewer_email'");}
 
 
 $db->close();
@@ -275,11 +274,7 @@ $db->close();
             <div class="row align-items-center">
                 <div class="col-auto">
                     <img src="../images/samana-logo.png" alt="Samana Group Logo" class="logo"><br>
-                    					<form method="POST" action="candidate_profile.php" style="display:inline;">
-						<input type="hidden" name="email" value="<?php echo htmlspecialchars($candidate_email); ?>">
-						<button type="submit" class="btn btn-warning">Back</button>
-							</form>
-                </div>
+                            </div>
                 <div class="col">
                     <h3 class='mb-0'><?php echo isset($page_title) ? htmlspecialchars($page_title) : 'Default Title'; ?></h3>
 					  <p><strong>Name:</strong> <?php echo htmlspecialchars($candidate['name']); ?> <br>
@@ -353,7 +348,9 @@ $db->close();
                         </span>
                     </li>
                 <?php endwhile; ?>
+
             </ul>
+					<a href="candidate_profile.php?email=<?php echo urlencode($candidate_email); ?>" class="btn btn-warning">Back</a>			
 
             <?php if (isset($selected_category_name)): ?>
                 <h4 class="mt-4">Skills in Selected Category: <?php echo htmlspecialchars($selected_category_name); ?></h4>

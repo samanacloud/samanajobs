@@ -230,6 +230,15 @@ while ($row = $gmailUsersResult->fetch_assoc()) {
             padding: 20px;
             border-radius: 5px;
         }
+
+		.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.table-striped .action-buttons {
+    text-align: right;
+}
 	</style>
 </head>
 
@@ -410,8 +419,8 @@ while ($row = $gmailUsersResult->fetch_assoc()) {
 	<!-- Modules Inserted Here -->
 <div class="container">
     <h4>Registered Users</h4>
-    <div class="table-responsive">
-        <table class="table table-striped">
+    <div class="table-responsive scrollable-table">
+        <table class="table table-striped ">
             <thead>
                 <tr>
                     <th>ID</th>

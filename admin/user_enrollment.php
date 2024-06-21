@@ -178,7 +178,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enroll_candidate'])) 
             <div class="row align-items-center">
                 <div class="col-auto">
                     <img src="../images/samana-logo.png" alt="Samana Group Logo" class="logo"><br>
-                   			<button type="button" class="btn btn-warning" onclick="location.href='user_responses.php';">Back</button>
                 </div>
                 <div class="col">
                     <h3 class='mb-0'><?php echo isset($page_title) ? htmlspecialchars($page_title) : 'Default Title'; ?></h3>
@@ -270,7 +269,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enroll_candidate'])) 
                 <label for="candidate_cv">Candidate CV</label>
                 <input type="text" class="form-control" id="candidate_cv" name="candidate_cv" value="<?php echo htmlspecialchars($candidateData['candidate_cv'] ?? ($_POST['cv_url'] ?? '')); ?>">
             </div>
-            <button type="submit" class="btn btn-primary" name="enroll_candidate">Enroll Candidate</button>
+           
+			<a href="user_responses.php" class="btn btn-warning">Back</a>
+			<button type="submit" class="btn btn-primary" name="enroll_candidate">Enroll Candidate</button>
+			
+
         </form>
     <?php else: ?>
         <p>No candidate selected to enroll. Go to the User-Responses to select the candidate to enroll.</p>

@@ -234,11 +234,7 @@ if ($has_second_review && $has_additional_review) {
             <div class="row align-items-center">
                 <div class="col-auto">
                     <img src="../images/samana-logo.png" alt="Samana Group Logo" class="logo"><br>
-					<form method="POST" action="candidate_profile.php" style="display:inline;">
-						<input type="hidden" name="email" value="<?php echo htmlspecialchars($candidate_email); ?>">
-						<button type="submit" class="btn btn-warning">Back</button>
-							</form>
-                </div>
+			</div>
                 <div class="col">
                     <h3 class='mb-0'><?php echo isset($page_title) ? htmlspecialchars($page_title) : 'Default Title'; ?></h3>
                 </div>
@@ -423,6 +419,7 @@ if ($has_second_review && $has_additional_review) {
                 </div>
             </div>
         </div>
+		<a href="candidate_profile.php?email=<?php echo urlencode($candidate_email); ?>" class="btn btn-warning">Back</a>
         <button type="submit" class="btn btn-primary">Submit Review</button>
     </form>
     <?php else: ?>
