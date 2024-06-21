@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color:#143154,
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h1, h2 {
+	background-color:#143154,
+		 color: #333;
+	
+}
+
+
+
+#jobs, #registration, #candidate-search {
+    border: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0.5em;
+    }
+}
