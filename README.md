@@ -71,10 +71,6 @@ Jobs Samana Cloud is a comprehensive job management platform designed to streaml
 - **Google Calendar Integration**:
   - Added functionality to create a Google Calendar event with pre-filled details, including candidate CV and profile links.
 
-### Changes in `user_responses.php`
-
-- **Not specified in the task details, but ensure to summarize any changes made here as well.**
-
 ### General Improvements
 
 - **Security Enhancements**: Added sensitive files (`google-login/config.php`, `google-login/credentials.json`, `config/config.php`) to `.gitignore` to prevent them from being tracked in Git.
@@ -83,7 +79,99 @@ Jobs Samana Cloud is a comprehensive job management platform designed to streaml
 ## Previous Updates
 
 ### Version 1.2.5 - Previous Update Summary
-- [Include details of the previous version if available.]
+
+### Changes in `user_responses.php`
+
+- **Session Management**: 
+  - Implemented a session timeout check to ensure users are logged out after a period of inactivity.
+  - Added a check to ensure only logged-in users with admin privileges can access the page.
+
+- **Google Sheets Integration**: 
+  - Integrated with Google Sheets API to fetch candidate responses from a specified spreadsheet.
+  - Used Google Sheets API to read data and display it in a structured table format.
+
+- **Admin Level Check**: 
+  - Added a function to check the admin level of the logged-in user to ensure only authorized users can access certain information.
+
+- **Candidate Details Display**:
+  - Displayed a list of candidates registered through Google Forms with details such as timestamp, name/email, and position applied for.
+  - Implemented a detailed view for each candidate that shows all their information in a structured format.
+  - Added functionality to enroll candidates using a form populated with the candidate's details.
+
+- **UI Enhancements**:
+  - Implemented a responsive table to display the candidate list with scrolling capabilities.
+  - Added a detailed view section for candidates with structured information display.
+  - Used Bootstrap for styling and icons for visual enhancements.
+
+- **Form Submission**:
+  - Implemented a form to enroll candidates with pre-populated data from the candidate's details.
+
+
+### Version 1.2.1 - Updated Security and Page enhancements 
+
+### Changes in `user_enrollment.php`
+
+- **Session Management**:
+  - Implemented a session timeout check to ensure users are logged out after a period of inactivity.
+  - Added a check to ensure only logged-in users with admin privileges can access the page.
+
+- **Candidate Enrollment**:
+  - Added functionality to enroll or update candidate profiles.
+  - Implemented functions to get candidate data and to enroll or update candidates in the database.
+  - Included a form to handle candidate enrollment with fields for name, email, phone number, location, English level, profile photo, and candidate CV.
+
+- **Google Sheets Integration**:
+  - Integrated with Google Sheets API to fetch candidate responses from a specified spreadsheet.
+  - Used Google Sheets API to read data and display it in a structured table format.
+
+- **Admin Level Check**:
+  - Added a function to check the admin level of the logged-in user to ensure only authorized users can access certain information.
+
+- **UI Enhancements**:
+  - Used Bootstrap for styling and icons for visual enhancements.
+  - Added buttons for navigation and actions like enrolling candidates and going back to the user responses page.
+
+- **Form Submission**:
+  - Implemented a form to enroll candidates with pre-populated data from the candidate's details.
+  - Displayed success message upon successful enrollment.
+
+
+### Version 1.2.1 - Updated pages and enhancements 
+### Changes in `user_administration.php`
+
+- **Session Management**:
+  - Implemented a session timeout check to ensure users are logged out after a period of inactivity.
+  - Added a check to ensure only logged-in users with admin privileges can access the page.
+
+- **User Management**:
+  - Added functionality to fetch, display, and manage users.
+  - Implemented delete functionality to remove users and their related records from the database.
+  - Added role change functionality to update user roles.
+
+- **Admin Level Check**:
+  - Added a function to check the admin level of the logged-in user to ensure only authorized users can access certain information.
+
+- **UI Enhancements**:
+  - Used Bootstrap for styling and icons for visual enhancements.
+  - Displayed users in a structured table format with options to delete and change roles.
+
+- **Data Display**:
+  - Displayed users with details like ID, name, email, creation date, role, and actions.
+  - Separated users into two categories: those with 'samanagroup.co' emails and those without.
+
+### Changes in `admin/index.php`
+
+- **Session Management**:
+  - Implemented a session timeout check to ensure users are logged out after a period of inactivity.
+  - Added a check to ensure only logged-in users with admin privileges can access the page.
+
+- **Admin Level Check**:
+  - Added a function to check the admin level of the logged-in user to ensure only authorized users can access certain information.
+
+- **UI Enhancements**:
+  - Used Bootstrap for styling and icons for visual enhancements.
+  - Displayed available modules in a card layout for easy navigation.
+
 
 ## Installation Instructions
 
