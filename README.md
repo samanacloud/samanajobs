@@ -49,6 +49,21 @@ Jobs Samana Cloud is a comprehensive job management platform designed to streaml
 
 
 
+## Version 1.2.7
+
+### Changelog
+
+#### Minor GUI Adjustments
+
+- **Aligned Action Buttons:** The action buttons in the "Samana Group Users" table are now aligned to the right to match the alignment in the "Registered Users" table.
+- **Scrollable Table for Registered Users:** Implemented a scrollable table for the "Registered Users" section to improve usability when dealing with large datasets.
+- **Email Functionality:** Added an email icon next to the email address that redirects to Google Mail with pre-filled email and subject fields.
+
+### Updated CSS
+
+- Added CSS for aligning action buttons to the right.
+- Updated CSS for making the "Registered Users" table scrollable.
+
 ## Version 1.2.6 - Update Summary
 
 ### Changes in `candidate_profile.php`
